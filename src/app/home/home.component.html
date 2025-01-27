@@ -1,0 +1,43 @@
+<section class="hero min-h-screen relative overflow-hidden">
+    <!-- Animated Background Overlay -->
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+  
+    <!-- Content -->
+    <div class="container relative z-20 text-white">
+      <div class="row min-h-screen items-center">
+        <div class="col-lg-8">
+          <h1 class="text-5xl font-bold mb-6 animate-fade-in-up">
+            Master Chess with Grandmasters
+          </h1>
+          <p class="text-xl mb-8 animate-fade-in-up delay-100">
+            Learn strategies, openings, and endgames from world-class instructors.
+          </p>
+          <button 
+            mat-raised-button 
+            color="accent" 
+            class="!text-lg animate-fade-in-up delay-200"
+          >
+            Start Learning Today
+          </button>
+        </div>
+  
+        <!-- Courses Carousel -->
+        <div class="col-lg-4 mt-8 lg:mt-0">
+          <swiper-container class="shadow-xl" navigation="true">
+            <swiper-slide *ngFor="let course of courses">
+              <mat-card class="!bg-white/10 !backdrop-blur-sm">
+                <mat-card-header>
+                  <mat-card-title class="!text-white">
+                    {{ course.title }}
+                  </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p class="text-gray-200">{{ course.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+    </div>
+  </section>
