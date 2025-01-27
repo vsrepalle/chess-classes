@@ -1,12 +1,24 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';  // Import CommonModule
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, RouterLink],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    RouterModule,   // Import RouterModule here
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatCardModule,
+    CommonModule
+  ],
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })

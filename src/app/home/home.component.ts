@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { register } from 'swiper/element/bundle';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';  // Import CommonModule
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router'; 
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Register Swiper custom elements
 register();
@@ -11,10 +15,14 @@ register();
   selector: 'app-home',
   standalone: true,
   imports: [
-    // Add these lines
-    MatCardModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterModule,   // Import RouterModule here
+    MatToolbarModule,
     MatButtonModule,
-    // Other imports (RouterLink, etc.)
+    MatMenuModule,
+    MatCardModule,
+    CommonModule
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],

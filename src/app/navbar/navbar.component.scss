@@ -1,0 +1,9 @@
+/* Navbar styles */
+@media (max-width: 768px) {
+    .links {
+      display: none; /* Hide desktop links on mobile */
+    }
+    .mobile-menu-button {
+      display: block; /* Show mobile menu button */
+    }
+  }

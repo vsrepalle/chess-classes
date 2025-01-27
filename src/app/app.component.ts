@@ -1,20 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component'; // Import the navbar
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterModule, RouterOutlet, NavbarComponent], // Add NavbarComponent to imports
   template: `
-    <h1>Chess Online Classes</h1>
+    <app-navbar></app-navbar> <!-- Add this line -->
     <router-outlet></router-outlet>
   `,
-  styles: [`
-    h1 { 
-      text-align: center; 
-      color: #333; 
-      padding: 20px;
-    }
-  `]
+  styles: []
 })
 export class AppComponent { }
